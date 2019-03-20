@@ -8,13 +8,7 @@ import java.rmi.registry.Registry;
 public class Server {
 	private static final int PORT = 1099;
 
-    /**
-     * Cria uma inst�ncia da classe Server.
-     *
-     * @param remote Objeto que ser� acessado remotamente.
-     * @param ip     Endere�o IP.
-     * @param name   Nome do objeto.
-     */
+ 
     public Server(Remote remote, String ip, String name)
             throws IllegalAccessException, InstantiationException
     {
@@ -29,8 +23,8 @@ public class Server {
             Registry registry = LocateRegistry.createRegistry(PORT);
             //Caminho com o ip, porta e nome.
             String uri = "rmi://" + ip + ":" + PORT + "/" + name;
-            System.out.println("Servidor iniciado");
-            //Vincula o caminho com um objeto que ser� acessado remotamente.
+            System.out.println("Conectado");
+            //Vincula o caminho com um objeto que será�acessado remotamente.
             Naming.rebind(uri, remote);
         }
         catch(Exception e)

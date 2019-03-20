@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package server;
 
 import java.net.MalformedURLException;
@@ -15,7 +11,7 @@ import javax.swing.JOptionPane;
 public class ClientMain extends javax.swing.JFrame {
 
     ArrayList<Integer> listaNumeros = new ArrayList<>();
-    String ip = "192.168.43.174", name = "SD";
+    String ip = "192.168.43.231", name = "SD";
     
     
     public ClientMain() {
@@ -91,7 +87,7 @@ public class ClientMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdicionarActionPerformed
-        // TODO add your handling code here:
+        
         
         if(txtNumeroAInserir.getText().toString().equals("")){
             JOptionPane.showMessageDialog(null, "Número adicionado!");
